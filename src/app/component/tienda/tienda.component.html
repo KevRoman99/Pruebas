@@ -1,0 +1,45 @@
+
+<h1>{{ titulo }}</h1>
+<hr>
+<!-- <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link active" >Inicio</a>
+  
+        <a class="flex-sm-fill text-sm-center nav-link active" >Ubicacion</a>
+      </nav> -->
+
+<p>
+    Nombre de ubicacion:
+    <input type="text" [(ngModel)]="nombreDeUbicacion" (keyup)="mostrarNombre()" >
+</p>
+<!-- <form>
+  <div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+    <div class="col-sm-10">
+        <input type="text" [(ngModel)]="nombreDeUbicacion" (keyup)="mostrarNombre()" >
+    </div>
+  </div> -->
+  <hr>
+    
+<p>
+    Resultado: {{nombreDeUbicacion}}
+</p>
+
+
+Hijo
+
+<div *ngIf="miUbicacion">
+        <h4>Datos de la ubicacion traidos desde el hijo</h4>
+            <ol>
+                <li> {{ miUbicacion.nombre }} </li>
+            </ol>
+    </div>
+
+
+
+
+<p *ngIf="nombreDeUbicacion">
+<app-ubicacion [nombre]="nombreDeUbicacion"(pasameLosDatos)="verDatosUbicacion($event)">
+ 
+</app-ubicacion>
+</p>
+<hr>

@@ -1,0 +1,48 @@
+<h2> {{ nombre }} </h2>
+<!-- <ol>
+    <li>Zona: {{zona}}</li>
+    <li>Descripcion: {{ descripcion }}</li>
+    <li>Encargado: {{encargado}}</li>
+    <li>
+        <span *ngIf="abierto == true">Abierto</span>
+        <span *ngIf="abierto == !true">Cerrado</span>
+    </li>
+</ol> -->
+<!-- <ul class="list-group list-group-flush">
+    <li class="list-group-item">Zona: {{zona}}</li>
+    <li class="list-group-item">Descripcion: {{descripcion}}</li>
+    <li class="list-group-item">Encargado: {{encargado}}</li>
+    <li class="list-group-item">
+        <span *ngIf="abierto == true">Abierto</span>
+        <span *ngIf="abierto == !true">Cerrado</span>
+    </li>
+  </ul> -->
+
+  <div class="row">
+    <div class="col-4">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Zona: {{zona}}</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Descripcion: {{descripcion}}</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Encargado: {{encargado}}</a>
+        <li class="list-group-item">
+                <span *ngIf="abierto == true">Abierto</span>
+                <span *ngIf="abierto == !true">Cerrado</span>
+            </li>
+        </div>
+    </div>
+    <br>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Lo encontramos en el KM. 4.5 Carretera al Atlántico 3-20 zona 18</div>
+        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Zona de alto incremento de negocios, siendo unas de la zonas más reconocidad por su seguridad en Guatemala.</div>
+        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">El mejor encargado de Gerencia departamental. Siendo reconocido mundialmente.</div>
+      </div>
+    </div>
+  </div>
+  <script>
+      $('#someListItem').tab('show')
+  </script>
+
+<button class="btn btn-primary" id="buscar" (click)="emitirEvento()">
+    <i class="fas fa-search"></i> Mostrar Datos del padre
+</button>
